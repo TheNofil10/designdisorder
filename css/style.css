@@ -1686,6 +1686,7 @@ menu
 banner
 
 ------------------------------------------- */
+
 .mil-banner {
   height: 100vh;
   background-image: url('../img/background/5.jpg'); /* Replace with your image path */
@@ -1693,7 +1694,6 @@ banner
   background-position: center; /* Center the image in the banner */
   background-repeat: no-repeat; /* Prevent the image from repeating */
   position: relative;
-  z-index: 1; /* Ensures the background is behind the content */
 }
 .mil-banner .container {
   height: 100%;
