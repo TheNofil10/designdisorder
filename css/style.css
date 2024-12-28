@@ -1687,14 +1687,27 @@ banner
 
 ------------------------------------------- */
 
+.mil-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.mil-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
 .mil-banner {
   height: 100vh;
-  background-image: url('../img/background/5.jpg'); /* Replace with your image path */
-  background-size: cover; /* Ensure the image covers the entire banner */
-  background-position: center; /* Center the image in the banner */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-image: url('../img/background/gifbg_onlyonce.gif'); /* Replace with your GIF path */
+  background-size: cover; /* Ensure the GIF covers the entire banner */
+  background-position: center; /* Center the GIF in the banner */
+  background-repeat: no-repeat;
   position: relative;
+  animation-delay: 2s;
 }
+
 .mil-banner .container {
   height: 100%;
   display: -webkit-box;
