@@ -232,6 +232,12 @@
                 <!-- banner -->
                 <section class="mil-banner mil-dark-bg mil-hidden">
                     <div class="mi-invert-fix">
+                        <!-- Video Background -->
+                        <video id="background-video" preload="auto" muted playsinline>
+                            <source src="img/background/final_banner.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                
                         <div class="mil-animation-frame">
                             <div class="mil-animation mil-position-1 mil-scale" data-value-1="7" data-value-2="1.6">
                             </div>
@@ -253,7 +259,6 @@
                                             elevate your brand and deliver results that matter.</p>
                                     </div>
                                 </div>
-
                                 <!-- <a href="services.html" class="mil-button mil-arrow-place mil-btn-space">
                                     <span>What we do</span>
                                 </a>
@@ -284,11 +289,11 @@
                                     <a href="#about"
                                         class="mil-button mil-arrow-place mil-icon-button mil-arrow-down"></a>
                                 </div> -->
+
                             </div>
                         </div>
                     </div>
                 </section>
-
                 <!-- banner end -->
 
                 <!-- about -->
@@ -1053,14 +1058,16 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            setTimeout(function () {
-                const banner = document.querySelector(".mil-banner");
-                banner.classList.remove("mil-hidden");
-                banner.classList.add("mil-visible");
-            }, 5000); // 5 seconds delay gif banner
+            const video = document.getElementById("background-video");
+
+            // Wait for 5 seconds after page load
+            setTimeout(() => {
+                video.play().catch(error => {
+                    console.error("Video playback failed:", error);
+                });
+            }, 5000); // 5000ms = 5 seconds
         });
     </script>
-
 
 
 </body>
